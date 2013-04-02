@@ -12,6 +12,16 @@ github:
   user: kmiddleton
   repo: testslides
 
+--- .segue .quote .dark
+
+<q> Slidify is a tool that makes it easy to create, customize and publish, reproducible HTML5 slide decks using R Markdown.</q>
+
+<style>
+.dark q {
+  color: white;
+}
+</style>
+
 --- .middle
 
 ## Read-And-Delete
@@ -31,7 +41,7 @@ require(ggplot2)
 qplot(wt, mpg, data = mtcars)
 ```
 
---- .segue
+--- 
 
 ## A Table
 

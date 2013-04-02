@@ -12,6 +12,16 @@ github:
   user: kmiddleton
   repo: testslides
 
+--- .segue .quote .dark
+
+<q> Slidify is a tool that makes it easy to create, customize and publish, reproducible HTML5 slide decks using R Markdown.</q>
+
+<style>
+.dark q {
+  color: white;
+}
+</style>
+
 --- .middle
 
 ## Read-And-Delete
@@ -35,7 +45,7 @@ qplot(wt, mpg, data = mtcars)
 ![plot of chunk simple-plot](figure/simple-plot.png) 
 
 
---- .segue
+--- 
 
 ## A Table
 
@@ -47,7 +57,7 @@ xtable(head(mtcars))
 ```
 
 <!-- html table generated in R 3.0.0 by xtable 1.7-1 package -->
-<!-- Mon Apr  1 19:42:34 2013 -->
+<!-- Mon Apr  1 19:44:44 2013 -->
 <TABLE border=1>
 <TR> <TH>  </TH> <TH> mpg </TH> <TH> cyl </TH> <TH> disp </TH> <TH> hp </TH> <TH> drat </TH> <TH> wt </TH> <TH> qsec </TH> <TH> vs </TH> <TH> am </TH> <TH> gear </TH> <TH> carb </TH>  </TR>
   <TR> <TD align="right"> Mazda RX4 </TD> <TD align="right"> 21.00 </TD> <TD align="right"> 6.00 </TD> <TD align="right"> 160.00 </TD> <TD align="right"> 110.00 </TD> <TD align="right"> 3.90 </TD> <TD align="right"> 2.62 </TD> <TD align="right"> 16.46 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 4.00 </TD> <TD align="right"> 4.00 </TD> </TR>
