@@ -6,16 +6,11 @@ job         :
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [mathjax, bootstrap, quiz]
+widgets     : [mathjax]
 mode        : selfcontained # {standalone, draft}
 github:
   user: kmiddleton
   repo: testslides
-
----
-
-
-
 
 --- .segue .quote .dark
 
@@ -41,15 +36,28 @@ github:
 
 Let us create a simple scatterplot.
 
-<div class="rimage center"><img src="fig/simple-plot.png" title="plot of chunk simple-plot" alt="plot of chunk simple-plot" class="plot" /></div>
+
+```r
+require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+```
+
+![plot of chunk simple-plot](figure/simple-plot.png) 
 
 
 --- 
 
 ## A Table
 
+
+```r
+library(xtable)
+options(xtable.type = "html")
+xtable(head(mtcars))
+```
+
 <!-- html table generated in R 3.0.0 by xtable 1.7-1 package -->
-<!-- Mon Apr  1 20:15:20 2013 -->
+<!-- Mon Apr  1 20:19:57 2013 -->
 <TABLE border=1>
 <TR> <TH>  </TH> <TH> mpg </TH> <TH> cyl </TH> <TH> disp </TH> <TH> hp </TH> <TH> drat </TH> <TH> wt </TH> <TH> qsec </TH> <TH> vs </TH> <TH> am </TH> <TH> gear </TH> <TH> carb </TH>  </TR>
   <TR> <TD align="right"> Mazda RX4 </TD> <TD align="right"> 21.00 </TD> <TD align="right"> 6.00 </TD> <TD align="right"> 160.00 </TD> <TD align="right"> 110.00 </TD> <TD align="right"> 3.90 </TD> <TD align="right"> 2.62 </TD> <TD align="right"> 16.46 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 4.00 </TD> <TD align="right"> 4.00 </TD> </TR>
@@ -79,47 +87,3 @@ $$
 \frac{\partial X}{\partial v} &  \frac{\partial Y}{\partial v} & 0
 \end{vmatrix}
 $$
-
----
-
-## Widgets: jQuery-Quiz ##
-
-This is a multiple choice question
-
-1. Choice 1
-2. Choice 2
-3. _Choice 3 (correct)_
-4. Choice 4
-
-*** hint
-
-This is a hint
-
-*** explanation
-
-This is the explanation
-
----
-
-## Widgets: Bootstrap ##
-
-**Blocks**
-
-<div class="alert alert-info">
-  <p>This is an alert info block which should render in blue</p>
-</div>
-
-**Tooltips**
-
-This is to check out tooltips in bootstrap <a href="#" rel="tooltip" data-original-title="Default tooltip">you probably</a>
-
-**Popover**
-
-<a class="btn btn-large btn-danger" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" id='example'>Click to toggle popover</a>
-
-*** pnotes
-
-The font size and color needs some tweaking.
-
----
-
