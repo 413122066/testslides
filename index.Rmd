@@ -6,11 +6,35 @@ job         :
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+widgets     : [mathjax, bootstrap, quiz]
 mode        : selfcontained # {standalone, draft}
 github:
   user: kmiddleton
   repo: testslides
+
+---
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+options(width = 70)
+opts_chunk$set(message = F, error = F, warning = F, echo = F, comment = NA, fig.align = 'center', dpi = 100, fig.height = 3.5, fig.width = 8, tidy = F, cache = T, cache.path = '.cache/', fig.path = 'fig/')
+require(ggplot2); require(xtable); require(plyr); require(openintro)
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+require(latticeExtra)
+trellis.par.set(theme = theEconomist.theme(box = 'transparent'))
+lattice.options(theEconomist.opts())
+knit_hooks$set(document = function(doc){
+  stringr::str_replace_all(doc, "```\n*```[^r]", "")
+})
+```
 
 --- .segue .quote .dark
 
@@ -70,4 +94,46 @@ $$
 \end{vmatrix}
 $$
 
+---
+
+## Widgets: jQuery-Quiz ##
+
+This is a multiple choice question
+
+1. Choice 1
+2. Choice 2
+3. _Choice 3 (correct)_
+4. Choice 4
+
+*** hint
+
+This is a hint
+
+*** explanation
+
+This is the explanation
+
+---
+
+## Widgets: Bootstrap ##
+
+**Blocks**
+
+<div class="alert alert-info">
+  <p>This is an alert info block which should render in blue</p>
+</div>
+
+**Tooltips**
+
+This is to check out tooltips in bootstrap <a href="#" rel="tooltip" data-original-title="Default tooltip">you probably</a>
+
+**Popover**
+
+<a class="btn btn-large btn-danger" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" id='example'>Click to toggle popover</a>
+
+*** pnotes
+
+The font size and color needs some tweaking.
+
+---
 
