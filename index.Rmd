@@ -22,11 +22,10 @@ opts_chunk$set(message = FALSE,
                comment = NA, 
                fig.align = 'center', 
                dpi = 100, 
-               fig.height = 4.5, 
-               fig.width = 8, 
+#               fig.height = 4.5, 
+#               fig.width = 8, 
                tidy = FALSE, 
-               cache = TRUE, 
-               cache.path = '.cache/', 
+               cache = FALSE, 
                fig.path = 'fig/')
 require(ggplot2)
 require(xtable)
