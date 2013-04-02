@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset='utf-8'>
-	<title></title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="generator" content="slidify" />
-	
-	<!-- LOAD STYLE SHEETS -->
-	<link rel="stylesheet" href="libraries/frameworks/html5slides//styles.css">
-	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />  <link rel="stylesheet" href = "assets/css/ribbons.css">
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
   
+    <link rel="stylesheet" href = "assets/css/ribbons.css">
+
 </head>
-<body style='display: none'>
-	<section class='slides layout-regular template-regular'>
-     <!-- SLIDES -->
-        <article class="" id="slide-1" style="background:;">
-  <h3>Read-And-Delete</h3>
-  <ol>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+    <!-- END LOGO SLIDE -->
+    
+
+    <!-- TITLE SLIDE -->
+    <!-- Should I move this to a Local Layout File? -->
+    <slide class="title-slide segue nobackground">
+      <hgroup class="auto-fadein">
+        <h1></h1>
+        <h2></h2>
+        <p><br/></p>
+      </hgroup>
+          </slide>
+
+    <!-- SLIDES -->
+      <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Read-And-Delete</h2>
+  </hgroup>
+  <article>
+    <ol>
 <li>Edit YAML front matter</li>
 <li>Write using R Markdown</li>
 <li>Use an empty line followed by three dashes to separate slides!</li>
 </ol>
 
-</article>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-        <article class="class" id="id" style="background:;">
-  <h3>A Simple Plot</h3>
-  <p>Let us create a simple scatterplot.</p>
+      <slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>A Simple Plot</h2>
+  </hgroup>
+  <article>
+    <p>Let us create a simple scatterplot.</p>
 
 <pre><code class="r">require(ggplot2)
 qplot(wt, mpg, data = mtcars)
@@ -35,18 +67,23 @@ qplot(wt, mpg, data = mtcars)
 
 <p><img src="figure/simple-plot.png" alt="plot of chunk simple-plot"> </p>
 
-</article>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-        <article class="" id="slide-3" style="background:;">
-  <h3>A Table</h3>
-  <pre><code class="r">library(xtable)
+      <slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>A Table</h2>
+  </hgroup>
+  <article>
+    <pre><code class="r">library(xtable)
 options(xtable.type = &quot;html&quot;)
 xtable(head(mtcars))
 </code></pre>
 
 <!-- html table generated in R 3.0.0 by xtable 1.7-1 package -->
 
-<!-- Mon Apr  1 18:54:30 2013 -->
+<!-- Mon Apr  1 19:03:15 2013 -->
 
 <TABLE border=1>
 <TR> <TH>  </TH> <TH> mpg </TH> <TH> cyl </TH> <TH> disp </TH> <TH> hp </TH> <TH> drat </TH> <TH> wt </TH> <TH> qsec </TH> <TH> vs </TH> <TH> am </TH> <TH> gear </TH> <TH> carb </TH>  </TR>
@@ -58,14 +95,26 @@ xtable(head(mtcars))
   <TR> <TD align="right"> Valiant </TD> <TD align="right"> 18.10 </TD> <TD align="right"> 6.00 </TD> <TD align="right"> 225.00 </TD> <TD align="right"> 105.00 </TD> <TD align="right"> 2.76 </TD> <TD align="right"> 3.46 </TD> <TD align="right"> 20.22 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 3.00 </TD> <TD align="right"> 1.00 </TD> </TR>
    </TABLE>
 
-</article>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-  </section>
+    <slide class="backdrop"></slide>
+  </slides>
+
+  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
 </body>
-  <!-- LOAD JAVASCRIPTS  -->
-	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
-	<!-- LOAD HIGHLIGHTER JS FILES -->
-	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
-	</html>
+<!-- Grab CDN jQuery, fall back to local if offline -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script>
+<!-- Load Javascripts for Widgets -->
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+</html>
