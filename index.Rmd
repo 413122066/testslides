@@ -41,7 +41,7 @@ require(ggplot2)
 qplot(wt, mpg, data = mtcars)
 ```
 
---- 
+--- bg:yellow
 
 ## A Table
 
